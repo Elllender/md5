@@ -17,7 +17,7 @@ def success():
 
 success()
 
-def brut():
+def hashbr():
    inp = raw_input('[+] Name is file : ') # input for Python 3
    f = open(inp,'r')
    text = f.readlines()
@@ -31,4 +31,4 @@ def brut():
        for line in find:
            if len(line) > 1:
                print('[+] Hash found : ' + lines + ' : ' + line)
-brut()
+hashbr()
