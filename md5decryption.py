@@ -1,6 +1,7 @@
 # /usr/bin/python
 # -*- coding:utf-8 -*-
 import requests, re , sys
+for time import sleep
 
 url = ['http://md5decryption.com/']
 def success():
@@ -28,6 +29,7 @@ def hashbr():
        req2 = requests.post(url[0], data=data,headers=headers)
        htmltext = req2.content
        find = re.findall(r"Decrypted Text: </b>(.*?)</font>", str(htmltext))
+       slepp(0.2)
        for line in find:
            if len(line) > 1:
                print('[+] Hash found : ' + lines + ' : ' + line)
